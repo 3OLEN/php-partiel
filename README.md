@@ -68,15 +68,15 @@ Le formulaire doit mettre à disposition les champs suivants :
 
 ### 📦️ Projet
 
-- [ ] Renseignez votre NOM + Prénom : 
-- [ ] Commiter régulièrement : dès que vous avez terminé une partie, ou toutes les 30/45mn.
-- [ ] Initialiser un projet composer
-  - [ ] `"name": "php/partiel"`
-  - [ ] Préfixe des namespaces : `App\\`
-  - [ ] Dossier des sources PHP : `src/`
-  - [ ] Version PHP minimale : `8.3.0`
-  - [ ] Extensions PHP requises : `ext-pdo` / `ext-pdo_mysql` / `ext-mbstring`
-- [ ] Définissez et gérez correctement votre `.gitignore`
+- [x] Renseignez votre NOM + Prénom : Billy Villena
+- [x] Commiter régulièrement : dès que vous avez terminé une partie, ou toutes les 30/45mn.
+- [x] Initialiser un projet composer
+  - [x] `"name": "php/partiel"`
+  - [x] Préfixe des namespaces : `App\\`
+  - [x] Dossier des sources PHP : `src/`
+  - [x] Version PHP minimale : `8.3.0`
+  - [x] Extensions PHP requises : `ext-pdo` / `ext-pdo_mysql` / `ext-mbstring`
+- [x] Définissez et gérez correctement votre `.gitignore`
 - [ ] Le point d'entrée de l'application est `index.php` à la racine du projet
 - [ ] Les assets seront définies dans le dossier `public/`
   - ⚠️ Vous pouvez avoir un bonus sur l'UX / UI, mais à vous de gérer le temps imparti !
