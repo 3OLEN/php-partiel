@@ -141,8 +141,8 @@ Le formulaire doit mettre à disposition les champs suivants :
 
 ### 🍱 View
 
-- [ ] Utilisation de templates dédiés dans le dossier `templates/` à la racine du projet
-  - [ ] Les templates sont organisés dans des sous-dossiers
-- [ ] Utilisation du HTML sémantique
-- [ ] Réutilisation de morceaux de templates
+- [x] Utilisation de templates dédiés dans le dossier `templates/` à la racine du projet
+  - [x] Les templates sont organisés dans des sous-dossiers
+- [x] Utilisation du HTML sémantique
+- [x] Réutilisation de morceaux de templates
 - [ ] Navigation entre les pages par des boutons d'action ou des liens
