@@ -6,6 +6,8 @@ namespace App\Web\Router;
 
 use App\Controller\Error\NotFoundErrorController;
 use App\Controller\HomeController;
+use App\Controller\Identification\IdentificationPostController;
+use App\Controller\OubliezMoi\OubliezMoiController;
 use App\Exception\Web\ResourceNotSupportedException;
 
 class Router
@@ -26,6 +28,10 @@ class Router
     {
         return match ($path) {
             '/' => new HomeController(),
+            '/identification' => $method === 'POST'
+                ? new IdentificationPostController()
+                : null,
+            '/oubliez-moi' => new OubliezMoiController(),
             default => null,
         }
             ?? new NotFoundErrorController(path: $path);
