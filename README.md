@@ -34,7 +34,7 @@ L'annuaire inversé permettra de retourner toutes les ressources (donc des liens
 
 Vous aurez à réaliser les pages suivantes :
 
-- [ ] Accueil
+- [x] Accueil
 - [ ] Annuaire inversé
 
 #### Accueil
@@ -119,14 +119,14 @@ Le formulaire doit mettre à disposition les champs suivants :
 ### 🌐 Router
 
 - [x] Doit laisser le soin au serveur web de servir les assets (fichiers accessibles dans `public/`)
-- [ ] Doit définir les routes de l'application et utiliser le controller associé
+- [x] Doit définir les routes de l'application et utiliser le controller associé
 - [x] Doit rejeter par une 404 si la route n'existe pas
 
 ### ⬢ Controllers
 
-- [ ] Doivent être définis dans leur propre dossier et organisés dans des sous-dossiers
-- [ ] Rappels de POO [⬆️](#-programmation-orientée-objet) 
-- [ ] À vous de voir si vous faites un controller par action, ou plusieurs actions dans le même controller, ou du
+- [x] Doivent être définis dans leur propre dossier et organisés dans des sous-dossiers
+- [x] Rappels de POO [⬆️](#-programmation-orientée-objet) 
+- [x] À vous de voir si vous faites un controller par action, ou plusieurs actions dans le même controller, ou du
       Controller "invokable", etc. Tant que l'organisation est propre et cohérente !
 - [ ] Les données soumises sont vérifiées et validées 
 
@@ -145,4 +145,4 @@ Le formulaire doit mettre à disposition les champs suivants :
   - [x] Les templates sont organisés dans des sous-dossiers
 - [x] Utilisation du HTML sémantique
 - [x] Réutilisation de morceaux de templates
-- [ ] Navigation entre les pages par des boutons d'action ou des liens
+- [x] Navigation entre les pages par des boutons d'action ou des liens

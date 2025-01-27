@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Web\Router;
 
 use App\Controller\Error\NotFoundErrorController;
+use App\Controller\HomeController;
 use App\Exception\Web\ResourceNotSupportedException;
 
 class Router
@@ -24,6 +25,7 @@ class Router
     private function getController(string $path, string $method): callable
     {
         return match ($path) {
+            '/' => new HomeController(),
             default => null,
         }
             ?? new NotFoundErrorController(path: $path);
