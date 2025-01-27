@@ -1,0 +1,36 @@
+services:
+  app:
+    image: 3olen-php-partiel
+    ports:
+    - "80:80"
+    build:
+      context: docker/php
+      dockerfile: .devrendal/docker/php/Dockerfile
+    depends_on:
+    - db
+    volumes:
+    - ./:/app
+    command: ["php", "-S", "0.0.0.0:80", "index.php"]
+    networks:
+    - php_partiel_devrendal_network
+
+  db:
+    image: mysql:8.0
+    ports:
+    - "3306:3306"
+    environment:
+      MYSQL_DATABASE: "partiel_php"
+      MYSQL_USER: "usr"
+      MYSQL_PASSWORD: "pwd"
+      MYSQL_ROOT_PASSWORD: "root"
+    volumes:
+    - mysql_data:/var/lib/mysql
+    networks:
+    - php_partiel_devrendal_network
+
+volumes:
+  mysql_data:
+
+networks:
+  php_partiel_devrendal_network:
+    driver: bridge
