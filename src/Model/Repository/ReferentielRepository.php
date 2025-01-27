@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Model\Repository;
 
 use App\Model\DbConnection;
+use App\Model\Dto\QueryParameterDto;
 use App\Model\Entity\Referentiel;
 use App\Model\Entity\Tag;
 
@@ -23,23 +24,19 @@ SQL;
         $parameters = [];
         if ($search !== null) {
             $whereClauses[] = 'ref.titre LIKE :search';
-            $parameters[] = new readonly class(name: 'search', value: "%{$search}%", type: \PDO::PARAM_STR) {
-                public function __construct(
-                    public string $name,
-                    public mixed $value,
-                    public int $type,
-                ) {}
-            };
+            $parameters[] = new QueryParameterDto(
+                name: 'search',
+                value: "%{$search}%",
+                pdoType: \PDO::PARAM_STR,
+            );
         }
         if ($tag !== null) {
             $whereClauses[] = 't.id = :tag_id';
-            $parameters[] = new readonly class(name: 'tag_id', value: $tag->id, type: \PDO::PARAM_INT) {
-                public function __construct(
-                    public string $name,
-                    public mixed $value,
-                    public int $type,
-                ) {}
-            };
+            $parameters[] = new QueryParameterDto(
+                name: 'tag_id',
+                value: $tag->id,
+                pdoType: \PDO::PARAM_INT,
+            );
         }
 
         if (count($whereClauses) > 0) {
@@ -49,7 +46,7 @@ SQL;
 
         $statement = DbConnection::createOrGetInstance()->pdo->prepare($query);
         foreach ($parameters as $parameter) {
-            $statement->bindValue(param: $parameter->name, value: $parameter->value, type: $parameter->type);
+            $statement->bindValue(param: $parameter->name, value: $parameter->value, type: $parameter->pdoType);
         }
         $statement->execute();
 
