@@ -83,9 +83,9 @@ Le formulaire doit mettre à disposition les champs suivants :
 
 ### 🗃️ Base de données
 
-- [ ] Créer une base de données MySQL `partiel_php`
-- [ ] Utiliser le script SQL fourni [database/00-structure.sql](database/00-structure.sql) pour la structure de la BDD
-- [ ] Utiliser le script SQL fourni [database/01-fixtures.sql](database/01-fixtures.sql) pour les données de la BDD
+- [x] Créer une base de données MySQL `partiel_php`
+- [x] Utiliser le script SQL fourni [database/00-structure.sql](database/00-structure.sql) pour la structure de la BDD
+- [x] Utiliser le script SQL fourni [database/01-fixtures.sql](database/01-fixtures.sql) pour les données de la BDD
 
 ### 🔲 Programmation Orientée Objet
 
@@ -98,11 +98,11 @@ Le formulaire doit mettre à disposition les champs suivants :
 
 ----------
 
-- [ ] Tout ce qui peut être typé est typé !
+- [x] Tout ce qui peut être typé est typé !
   - Rares sont les cas où le type `mixed` est utilisé... 
-- [ ] Le `SRP` (_Single Responsibility Principle_) doit être respecté
-- [ ] Utilisation de la promotion des propriétés
-- [ ] Utilisation des accesseurs & mutateurs
+- [x] Le `SRP` (_Single Responsibility Principle_) doit être respecté
+- [x] Utilisation de la promotion des propriétés
+- [x] Utilisation des accesseurs & mutateurs
 
 ### 📥️ Point d'entrée
 
@@ -132,10 +132,10 @@ Le formulaire doit mettre à disposition les champs suivants :
 
 ### 🗄️ Model
 
-- [ ] Les entities et repositories doivent être définies dans leur propre dossier
+- [x] Les entities et repositories doivent être définies dans leur propre dossier
   - Il peut y avoir, éventuellement, un dossier encapsulant la partie "Model"
-- [ ] Rappels de POO [⬆️](#-programmation-orientée-objet)
-- [ ] La connexion BDD n'est définie qu'une seule fois dans toute l'application
+- [x] Rappels de POO [⬆️](#-programmation-orientée-objet)
+- [x] La connexion BDD n'est définie qu'une seule fois dans toute l'application
 - [ ] Les entités sont utilisées dans les repositories
 - [ ] Les requêtes utilisent des paramètres nommés
 
