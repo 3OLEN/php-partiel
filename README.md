@@ -77,8 +77,8 @@ Le formulaire doit mettre à disposition les champs suivants :
   - [x] Version PHP minimale : `8.3.0`
   - [x] Extensions PHP requises : `ext-pdo` / `ext-pdo_mysql` / `ext-mbstring`
 - [x] Définissez et gérez correctement votre `.gitignore`
-- [ ] Le point d'entrée de l'application est `index.php` à la racine du projet
-- [ ] Les assets seront définies dans le dossier `public/`
+- [x] Le point d'entrée de l'application est `index.php` à la racine du projet
+- [x] Les assets seront définies dans le dossier `public/`
   - ⚠️ Vous pouvez avoir un bonus sur l'UX / UI, mais à vous de gérer le temps imparti !
 
 ### 🗃️ Base de données
@@ -106,10 +106,10 @@ Le formulaire doit mettre à disposition les champs suivants :
 
 ### 📥️ Point d'entrée
 
-- [ ] Créer un fichier `index.php` à la racine du projet
-- [ ] Charger l'autoloader de Composer
-- [ ] Initialiser la session PHP
-- [ ] Définition du router
+- [x] Créer un fichier `index.php` à la racine du projet
+- [x] Charger l'autoloader de Composer
+- [x] Initialiser la session PHP
+- [x] Définition du router
   - Vous pouvez le définir directement dans ce fichier (le plus simple)
   - Ou par une classe dédiée `Router` ; s'il est **100% fonctionnel**, vous aurez un bonus
   - ⛔️ Pas de librairie tierce, à vous de le coder !
@@ -118,9 +118,9 @@ Le formulaire doit mettre à disposition les champs suivants :
 
 ### 🌐 Router
 
-- [ ] Doit laisser le soin au serveur web de servir les assets (fichiers accessibles dans `public/`)
+- [x] Doit laisser le soin au serveur web de servir les assets (fichiers accessibles dans `public/`)
 - [ ] Doit définir les routes de l'application et utiliser le controller associé
-- [ ] Doit rejeter par une 404 si la route n'existe pas
+- [x] Doit rejeter par une 404 si la route n'existe pas
 
 ### ⬢ Controllers
 
