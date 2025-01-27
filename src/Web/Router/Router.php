@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Web\Router;
 
+use App\Controller\Annuaire\AnnuaireController;
 use App\Controller\Error\NotFoundErrorController;
 use App\Controller\HomeController;
 use App\Controller\Identification\IdentificationPostController;
@@ -28,6 +29,7 @@ class Router
     {
         return match ($path) {
             '/' => new HomeController(),
+            '/annuaire' => new AnnuaireController(),
             '/identification' => $method === 'POST'
                 ? new IdentificationPostController()
                 : null,

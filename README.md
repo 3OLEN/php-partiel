@@ -35,7 +35,7 @@ L'annuaire inversé permettra de retourner toutes les ressources (donc des liens
 Vous aurez à réaliser les pages suivantes :
 
 - [x] Accueil
-- [ ] Annuaire inversé
+- [x] Annuaire inversé
 
 #### Accueil
 
@@ -45,12 +45,12 @@ Une simple page d'accueil permettant de naviguer vers les autres pages de l'appl
 
 Cette page est découpée en deux parties : formulaire de recherche et tableau des résultats.
 
-- [ ] Formulaire de recherche
-  - [ ] Champ de saisie libre pour recherche partielle sur le titre
-  - [ ] Sélection d'un sujet (tag)
-- [ ] Tableau des résultats
-  - [ ] Affiché à la soumission de la recherche
-  - [ ] Tableau (titre, url, autres sujets, date ajout) ; triées par titre ascendant
+- [x] Formulaire de recherche
+  - [x] Champ de saisie libre pour recherche partielle sur le titre
+  - [x] Sélection d'un sujet (tag)
+- [x] Tableau des résultats
+  - [x] Affiché à la soumission de la recherche
+  - [x] Tableau (titre, url, autres sujets, date ajout) ; triées par titre ascendant
 
 ### 💯 Pour aller + loin
 
@@ -128,7 +128,7 @@ Le formulaire doit mettre à disposition les champs suivants :
 - [x] Rappels de POO [⬆️](#-programmation-orientée-objet) 
 - [x] À vous de voir si vous faites un controller par action, ou plusieurs actions dans le même controller, ou du
       Controller "invokable", etc. Tant que l'organisation est propre et cohérente !
-- [ ] Les données soumises sont vérifiées et validées 
+- [x] Les données soumises sont vérifiées et validées 
 
 ### 🗄️ Model
 
@@ -136,8 +136,8 @@ Le formulaire doit mettre à disposition les champs suivants :
   - Il peut y avoir, éventuellement, un dossier encapsulant la partie "Model"
 - [x] Rappels de POO [⬆️](#-programmation-orientée-objet)
 - [x] La connexion BDD n'est définie qu'une seule fois dans toute l'application
-- [ ] Les entités sont utilisées dans les repositories
-- [ ] Les requêtes utilisent des paramètres nommés
+- [x] Les entités sont utilisées dans les repositories
+- [x] Les requêtes utilisent des paramètres nommés
 
 ### 🍱 View
 
