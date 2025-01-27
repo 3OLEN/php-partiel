@@ -58,11 +58,11 @@ Vous pouvez réaliser le formulaire d'ajout d'une nouvelle ressource dans le ré
 
 Le formulaire doit mettre à disposition les champs suivants :
 
-- [ ] Titre
-- [ ] Description
-- [ ] URL
-- [ ] Sujets (tags)
-- [ ] Créateur
+- [x] Titre
+- [x] Description
+- [x] URL
+- [x] Sujets (tags)
+- [x] Créateur
 
 ## 📋️ Instructions
 

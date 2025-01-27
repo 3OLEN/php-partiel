@@ -9,6 +9,8 @@ use App\Controller\Error\NotFoundErrorController;
 use App\Controller\HomeController;
 use App\Controller\Identification\IdentificationPostController;
 use App\Controller\OubliezMoi\OubliezMoiController;
+use App\Controller\Referentiel\Ajout\AjoutReferentielGetController;
+use App\Controller\Referentiel\Ajout\AjoutReferentielPostController;
 use App\Exception\Web\ResourceNotSupportedException;
 
 class Router
@@ -33,6 +35,9 @@ class Router
             '/identification' => $method === 'POST'
                 ? new IdentificationPostController()
                 : null,
+            '/referentiel/ajout' => $method === 'POST'
+                ? new AjoutReferentielPostController()
+                : new AjoutReferentielGetController(),
             '/oubliez-moi' => new OubliezMoiController(),
             default => null,
         }

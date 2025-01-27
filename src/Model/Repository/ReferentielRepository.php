@@ -68,4 +68,53 @@ SQL;
 
         return $referentiels;
     }
+
+    public function createNew(Referentiel $referentiel): void
+    {
+        // 1. Referentiel
+        $statement = DbConnection::createOrGetInstance()->pdo->prepare(
+            <<<SQL
+INSERT INTO referentiel (titre, description, url, createur, date_creation)
+VALUES (:titre, :description, :url, :createur, NOW())
+SQL
+        );
+        $statement->bindValue(param: ':titre', value: $referentiel->getTitre());
+        $statement->bindValue(param: ':description', value: $referentiel->getDescription());
+        $statement->bindValue(param: ':url', value: $referentiel->getUrl());
+        $statement->bindValue(param: ':createur', value: $referentiel->getCreateur());
+
+        $statement->execute();
+
+        // 2. Tags reliés
+        $referentielId = DbConnection::createOrGetInstance()->pdo->lastInsertId();
+
+        $values = [];
+        $parameters = [
+            new QueryParameterDto(
+                name: 'referentiel_id',
+                value: $referentielId,
+                pdoType: \PDO::PARAM_INT,
+            ),
+        ];
+        foreach ($referentiel->getTags() as $index => $tag) {
+            $values[] = "(:referentiel_id, :tag_id_{$index})";
+            $parameters[] = new QueryParameterDto(
+                name: "tag_id_{$index}",
+                value: $tag->id,
+                pdoType: \PDO::PARAM_INT,
+            );
+        }
+
+        $sqlReferentielTag = 'INSERT INTO referentiel_tag (id_referentiel, id_tag) VALUES '
+            . implode(', ', $values);
+        $referentielTagStatement = DbConnection::createOrGetInstance()->pdo->prepare($sqlReferentielTag);
+        foreach ($parameters as $parameter) {
+            $referentielTagStatement->bindValue(
+                param: $parameter->name,
+                value: $parameter->value,
+                type: $parameter->pdoType
+            );
+        }
+        $referentielTagStatement->execute();
+    }
 }

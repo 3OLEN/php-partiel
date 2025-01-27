@@ -14,6 +14,9 @@ class IdentificationPostController
 
         if (mb_strlen($identity) > 0) {
             IdentitySessionProvider::storeIdentity(identity: $identity);
+            header('Location: /referentiel/ajout');
+
+            return;
         }
 
         header('Location: /');
